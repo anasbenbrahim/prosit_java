@@ -2,16 +2,22 @@ import java.util.Scanner;
 
 public class ZooMangement {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Donner les nbr de cages : ");
-        int nbrCages = scanner.nextInt();
+        Animal lion = new Animal("Félins", "Lion", 5, true);
+        Animal crocodile = new Animal("Reptiles", "Crocodile", 7, false);
+        Animal panda = new Animal("Ursidés", "Panda", 4, true);
 
-        System.out.println("Donner les zoo name : ");
-        String zooName = scanner.nextLine();
+        System.out.println(lion.toString());
+        System.out.println(panda);
+        crocodile.displayAnimal();
 
-        System.out.println(zooName + " " + "comporte" + " " + nbrCages + " " + "cages");
+        System.out.println("*********************************************");
 
-        scanner.close();
+        Zoo myZoo = new Zoo("Parc National", "Paris", 4);
+
+        myZoo.displayZoo();
+        System.out.println(myZoo);
+        System.out.println(myZoo.toString());
+
     }
 }
